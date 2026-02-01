@@ -1,11 +1,13 @@
 from planner import plan_workflow, extract_json
 from executor import execute_workflow
 import json
+import os
 
 def main():
     user_input = input("Enter your request: ")
     workflow_raw = plan_workflow(user_input)
     print("Planned Workflow (RAW):", workflow_raw)
+    print("HF_TOKEN from environment:", os.getenv("HF_TOKEN"))
 
     try:
         workflow_json = extract_json(workflow_raw)
