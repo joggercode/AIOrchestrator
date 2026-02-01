@@ -41,18 +41,39 @@ def execute_workflow(workflow_json: str):
             location = params.get("location", "Unknown")
             weather = results.get("weather", "Clear")
 
+    try:
+        # Ask the model to suggest an activity dynamically
+        prompt = f"""
+        Suggest a suitable sports activity in {location}.
+        Current weather: {weather}.
+        If weather is bad, suggest an indoor alternative.
+        Output only one short activity description.
+        """
+
+        activity = client.text_generation(
+            prompt,
+            max_new_tokens=50,
+            temperature=0.3
+        )
+
+        results["activities"] = activity.strip()
+
+    except Exception as e:
+        print(f"[WARN] Model activity selection failed: {e}")
+
+        # Fallback: your existing if/elif rules
+
             # Intelligent activity selection based on weather
-            if "Rain" in weather:
+        if "Rain" in weather:
                 results["activities"] = f"Indoor yoga class in {location}"
-            elif "Snow" in weather:
+        elif "Clouds" in weather:
                 results["activities"] = f"Indoor gym session in {location}"
-            elif "Weather API error" in weather or "failed" in weather:
+        elif "Snow" in weather:
+                results["activities"] = f"Indoor table tennis session in {location}"    
+        elif "Weather API error" in weather or "failed" in weather:
                 # Fallback if weather API fails
                 results["activities"] = f"Default outdoor activity in {location}"
-            else:
+        else:
                 results["activities"] = f"Outdoor cycling tour in {location}"
-
-        elif api == "stock_api":
-            results["stock"] = "Fetched stock data"
 
     return results
