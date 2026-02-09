@@ -1,7 +1,6 @@
 from planner import plan_workflow, extract_json
 from executor import execute_workflow
 import json
-import os
 
 def main():
     user_input = input("Enter your request: ")
