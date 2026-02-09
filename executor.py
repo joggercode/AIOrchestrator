@@ -3,8 +3,6 @@ import requests
 
 
 def execute_workflow(workflow_json: str):
-    print("DEBUG RAW WORKFLOW_JSON:", workflow_json)
-
     if not workflow_json.strip():
         raise ValueError("Planner returned empty workflow JSON")
 
@@ -13,7 +11,7 @@ def execute_workflow(workflow_json: str):
 
     for step in workflow:
         api = step["api"]
-        params = step.get("params", {})
+        params = step.get("parameters", {})
 
         if api == "flight_api":
             results["flight"] = f"Booked flight with params {params}"
@@ -24,11 +22,10 @@ def execute_workflow(workflow_json: str):
         elif api == "weather_api":
             location = params.get("location", "Delhi")
             try:
-                api_key = "93c319fd42459682e3a223a23217622a"  # 🔹 your real key
+                api_key = "93c319fd42459682e3a223a23217622a"  # 🔹 replace with your real key
                 url = f"http://api.openweathermap.org/data/2.5/weather?q={location}&appid={api_key}&units=metric"
                 resp = requests.get(url).json()
 
-                # Defensive check: ensure keys exist
                 if "weather" in resp and "main" in resp:
                     condition = resp["weather"][0]["main"]   # e.g. Rain, Clear, Snow
                     temp = resp["main"]["temp"]
@@ -42,39 +39,16 @@ def execute_workflow(workflow_json: str):
             location = params.get("location", "Unknown")
             weather = results.get("weather", "Clear")
 
-    try:
-        # Ask the model to suggest an activity dynamically
-        prompt = f"""
-        Suggest a suitable sports activity in {location}.
-        Current weather: {weather}.
-        If weather is bad, suggest an indoor alternative.
-        Output only one short activity description.
-        """
-
-        activity = client.text_generation(
-            prompt,
-            max_new_tokens=50,
-            temperature=0.3
-        )
-
-        results["activities"] = activity.strip()
-
-    except Exception as e:
-        print(f"[WARN] Model activity selection failed: {e}")
-
-        # Fallback: your existing if/elif rules
-
             # Intelligent activity selection based on weather
-        if "Rain" in weather:
+            if "Rain" in weather:
                 results["activities"] = f"Indoor yoga class in {location}"
-        elif "Clouds" in weather:
+            elif "Clouds" in weather:
                 results["activities"] = f"Indoor gym session in {location}"
-        elif "Snow" in weather:
-                results["activities"] = f"Indoor table tennis session in {location}"    
-        elif "Weather API error" in weather or "failed" in weather:
-                # Fallback if weather API fails
-                results["activities"] = f"Default outdoor activity in {location}"
-        else:
+            elif "Snow" in weather:
+                results["activities"] = f"Indoor table tennis session in {location}"
+            elif "Clear" in weather or "Sunny" in weather:
                 results["activities"] = f"Outdoor cycling tour in {location}"
+            else:
+                results["activities"] = f"Default outdoor activity in {location}"
 
     return results
