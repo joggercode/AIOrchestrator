@@ -1,0 +1,57 @@
+{
+  "Paris": [
+    {"name": "Hotel Le Meurice", "rating": 4.8, "price": 380},
+    {"name": "Hotel Ritz Paris", "rating": 4.9, "price": 420},
+    {"name": "Hotel Plaza Athenee", "rating": 4.7, "price": 360}
+  ],
+  "London": [
+    {"name": "The Ritz London", "rating": 4.9, "price": 400},
+    {"name": "Claridge's", "rating": 4.7, "price": 350},
+    {"name": "The Savoy", "rating": 4.8, "price": 370}
+  ],
+  "New York": [
+    {"name": "The Plaza Hotel", "rating": 4.9, "price": 450},
+    {"name": "The St. Regis New York", "rating": 4.8, "price": 420},
+    {"name": "The Peninsula New York", "rating": 4.7, "price": 400}
+  ],
+  "Moscow": [
+    {"name": "Metropol Hotel Moscow", "rating": 4.8, "price": 300},
+    {"name": "Hotel Baltschug Kempinski", "rating": 4.7, "price": 280},
+    {"name": "The Ritz-Carlton Moscow", "rating": 4.9, "price": 350}
+  ],
+  "Tokyo": [
+    {"name": "Park Hyatt Tokyo", "rating": 4.9, "price": 420},
+    {"name": "Shangri-La Tokyo", "rating": 4.8, "price": 380},
+    {"name": "The Peninsula Tokyo", "rating": 4.7, "price": 390}
+  ],
+  "Singapore": [
+    {"name": "Marina Bay Sands", "rating": 4.9, "price": 500},
+    {"name": "Raffles Singapore", "rating": 4.8, "price": 480},
+    {"name": "The Fullerton Hotel", "rating": 4.7, "price": 450}
+  ],
+  "Bangalore": [
+    {"name": "The Leela Palace", "rating": 4.9, "price": 240},
+    {"name": "Taj West End", "rating": 4.8, "price": 220},
+    {"name": "ITC Gardenia", "rating": 4.7, "price": 210}
+  ],
+  "Kolkata": [
+    {"name": "The Oberoi Grand", "rating": 4.9, "price": 230},
+    {"name": "ITC Sonar", "rating": 4.8, "price": 210},
+    {"name": "Taj Bengal", "rating": 4.7, "price": 200}
+  ],
+  "Mumbai": [
+    {"name": "Taj Mahal Palace", "rating": 4.9, "price": 270},
+    {"name": "The Oberoi Mumbai", "rating": 4.8, "price": 250},
+    {"name": "ITC Grand Central", "rating": 4.7, "price": 230}
+  ],
+  "Manali": [
+    {"name": "Span Resort and Spa", "rating": 4.8, "price": 180},
+    {"name": "Manuallaya Resort", "rating": 4.7, "price": 160},
+    {"name": "Apple Country Resort", "rating": 4.6, "price": 150}
+  ],
+  "Delhi": [
+    {"name": "The Oberoi New Delhi", "rating": 4.9, "price": 250},
+    {"name": "Taj Palace", "rating": 4.8, "price": 220},
+    {"name": "ITC Maurya", "rating": 4.7, "price": 200}
+  ]
+}
