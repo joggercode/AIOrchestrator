@@ -62,6 +62,20 @@
       {"airline": "Air India", "price": 140, "duration": "2h 35m"}
     ]
   },
+    "Delhi-Chennai": {
+    "flights": [
+      {"airline": "IndiGo", "price": 120, "duration": "2h 30m"},
+      {"airline": "Vistara", "price": 130, "duration": "2h 25m"},
+      {"airline": "Air India", "price": 140, "duration": "2h 35m"}
+    ]
+  },
+    "Chennai-Delhi": {
+    "flights": [
+      {"airline": "IndiGo", "price": 120, "duration": "2h 30m"},
+      {"airline": "Vistara", "price": 130, "duration": "2h 25m"},
+      {"airline": "Air India", "price": 140, "duration": "2h 35m"}
+    ]
+  },
     "Bangalore-Delhi": {
     "flights": [
       {"airline": "IndiGo", "price": 120, "duration": "2h 30m"},

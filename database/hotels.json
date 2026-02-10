@@ -44,10 +44,10 @@
     {"name": "The Oberoi Mumbai", "rating": 4.8, "price": 250},
     {"name": "ITC Grand Central", "rating": 4.7, "price": 230}
   ],
-    "Chennai": [
-    {"name": "Taj Mahal Palace", "rating": 4.9, "price": 270},
-    {"name": "The Oberoi Mumbai", "rating": 4.8, "price": 250},
-    {"name": "ITC Grand Central", "rating": 4.7, "price": 230}
+  "Chennai": [
+    {"name": "GRT, Grand Chennai", "rating": 4.9, "price": 270},
+    {"name": "Trident Chennai", "rating": 4.8, "price": 250},
+    {"name": "Intercontinental Resort", "rating": 4.7, "price": 230}
   ],
   "Manali": [
     {"name": "Span Resort and Spa", "rating": 4.8, "price": 180},
