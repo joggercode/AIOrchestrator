@@ -12,7 +12,7 @@ st.markdown(
         border: 2px solid #000000 !important;  /* bold black border */
         border-radius: 6px;
         padding: 8px;
-        font-weight: bold;
+        font-weight: normal;
     }
 
     /* Dataframe table styling */
@@ -23,7 +23,7 @@ st.markdown(
     }
     .stDataFrame th {
         background-color: #f2f2f2;
-        font-weight: bold;
+        font-weight: normal;
         border: 1px solid #000000;
         padding: 6px;
     }
@@ -31,6 +31,7 @@ st.markdown(
         border: 1px solid #000000;
         padding: 6px;
     }
+    .stTextInput > div > div > input::placeholder { font-weight: 350; color: #888888; font-style: italic; }
     </style>
     """,
     unsafe_allow_html=True
@@ -41,8 +42,7 @@ st.set_page_config(page_title="AI Orchestrator Demo", layout="centered")
 
 
 st.title("🛫 AI based API Orchestrator ")
-
-user_input = st.text_input("Enter your request:")
+user_input = st.text_input("Enter your request:", placeholder="e.g., Book me a flight from Delhi to Goa with hotel and sports activities")
 
 if st.button("Generate Workflow"):
     if user_input.strip():
