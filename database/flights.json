@@ -6,7 +6,21 @@
       {"airline": "Lufthansa", "price": 500, "duration": "9h 20m"}
     ]
   },
+    "Paris-Delhi": {
+    "flights": [
+      {"airline": "Air France", "price": 550, "duration": "9h 00m"},
+      {"airline": "Air India", "price": 520, "duration": "9h 10m"},
+      {"airline": "Lufthansa", "price": 500, "duration": "9h 20m"}
+    ]
+  },
   "Delhi-London": {
+    "flights": [
+      {"airline": "British Airways", "price": 600, "duration": "9h 30m"},
+      {"airline": "Air India", "price": 580, "duration": "9h 40m"},
+      {"airline": "Virgin Atlantic", "price": 620, "duration": "9h 20m"}
+    ]
+  },
+    "London-Delhi": {
     "flights": [
       {"airline": "British Airways", "price": 600, "duration": "9h 30m"},
       {"airline": "Air India", "price": 580, "duration": "9h 40m"},
@@ -48,7 +62,42 @@
       {"airline": "Air India", "price": 140, "duration": "2h 35m"}
     ]
   },
-  "Delhi-Kolkata": {
+    "Delhi-Chennai": {
+    "flights": [
+      {"airline": "IndiGo", "price": 120, "duration": "2h 30m"},
+      {"airline": "Vistara", "price": 130, "duration": "2h 25m"},
+      {"airline": "Air India", "price": 140, "duration": "2h 35m"}
+    ]
+  },
+    "Chennai-Delhi": {
+    "flights": [
+      {"airline": "IndiGo", "price": 120, "duration": "2h 30m"},
+      {"airline": "Vistara", "price": 130, "duration": "2h 25m"},
+      {"airline": "Air India", "price": 140, "duration": "2h 35m"}
+    ]
+  },
+    "Bangalore-Delhi": {
+    "flights": [
+      {"airline": "IndiGo", "price": 120, "duration": "2h 30m"},
+      {"airline": "Vistara", "price": 130, "duration": "2h 25m"},
+      {"airline": "Air India", "price": 140, "duration": "2h 35m"}
+    ]
+  },
+      "Delhi-Goa": {
+    "flights": [
+      {"airline": "IndiGo", "price": 120, "duration": "2h 30m"},
+      {"airline": "Vistara", "price": 130, "duration": "2h 25m"},
+      {"airline": "Air India", "price": 140, "duration": "2h 35m"}
+    ]
+  },
+  "Goa-Delhi": {
+    "flights": [
+      {"airline": "IndiGo", "price": 110, "duration": "2h 00m"},
+      {"airline": "SpiceJet", "price": 100, "duration": "2h 10m"},
+      {"airline": "Air India", "price": 120, "duration": "2h 05m"}
+    ]
+  },
+    "Kolkata-Delhi": {
     "flights": [
       {"airline": "IndiGo", "price": 110, "duration": "2h 00m"},
       {"airline": "SpiceJet", "price": 100, "duration": "2h 10m"},
@@ -92,6 +141,13 @@
     ]
   },
   "Mumbai-Moscow": {
+    "flights": [
+      {"airline": "Aeroflot", "price": 390, "duration": "6h 30m"},
+      {"airline": "Air India", "price": 370, "duration": "6h 40m"},
+      {"airline": "S7 Airlines", "price": 410, "duration": "6h 20m"}
+    ]
+  },
+    "Moscow-Delhi": {
     "flights": [
       {"airline": "Aeroflot", "price": 390, "duration": "6h 30m"},
       {"airline": "Air India", "price": 370, "duration": "6h 40m"},

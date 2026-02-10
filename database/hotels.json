@@ -44,6 +44,11 @@
     {"name": "The Oberoi Mumbai", "rating": 4.8, "price": 250},
     {"name": "ITC Grand Central", "rating": 4.7, "price": 230}
   ],
+  "Chennai": [
+    {"name": "GRT, Grand Chennai", "rating": 4.9, "price": 270},
+    {"name": "Trident Chennai", "rating": 4.8, "price": 250},
+    {"name": "Intercontinental Resort", "rating": 4.7, "price": 230}
+  ],
   "Manali": [
     {"name": "Span Resort and Spa", "rating": 4.8, "price": 180},
     {"name": "Manuallaya Resort", "rating": 4.7, "price": 160},
@@ -53,5 +58,10 @@
     {"name": "The Oberoi New Delhi", "rating": 4.9, "price": 250},
     {"name": "Taj Palace", "rating": 4.8, "price": 220},
     {"name": "ITC Maurya", "rating": 4.7, "price": 200}
+  ],
+  "Goa": [
+    {"name": "Hilton Hotel Goa", "rating": 4.9, "price": 250},
+    {"name": "Hotel Ocean Wave, Goa", "rating": 4.8, "price": 220},
+    {"name": "resort Tera Paraiso, Goa", "rating": 4.7, "price": 200}
   ]
 }
