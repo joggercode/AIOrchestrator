@@ -50,10 +50,7 @@ if st.button("Generate Workflow"):
         workflow = extract_json(workflow_raw)
         results = execute_workflow(workflow)
 
-        st.subheader("Planned Workflow")
-        st.json(json.loads(workflow))
-
-        st.subheader("Final Results")
+        # st.subheader("Final Results")
 
         # Flights Table
         if "flights" in results and isinstance(results["flights"], list):
@@ -88,3 +85,7 @@ if st.button("Generate Workflow"):
         if "activities" in results:
             st.markdown("### 🎯 Suggested Activities")
             st.success(results["activities"])
+
+        st.subheader("API Calling Planned Workflow")
+        st.json(json.loads(workflow))
+
