@@ -16,7 +16,11 @@ def plan_workflow(user_input: str) -> str:
     Available APIs: flight_api, hotel_api, weather_api, activity_api, stock_api
     Rules:
       - Always include weather_api when planning outdoor or sports activities.
+      - Never leave origin or destination empty. If not specified, assume Delhi for origin and Mumbai for destination.
       - Output ONLY valid JSON with correct parameters from the request.
+      - For flight_api, hotel_api, weather_api, and activity_api:
+          * Always use FULL city names (e.g., "Delhi", "Mumbai") instead of airport codes or abbreviations.
+          * Do not use IATA codes like DEL, BOM, JFK, etc.
     """
 
     try:
