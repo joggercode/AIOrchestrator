@@ -72,16 +72,18 @@ def execute_workflow(workflow_json: str):
             weather = results.get("weather", "Clear")
 
             if "Rain" in weather:
-                results["activities"] = f"Indoor yoga class in {location}"
+                results["activities"] = f"Indoor yoga class"
+            elif "Mist" in weather:
+                results["activities"] = f"Photography walk"    
             elif "Clouds" in weather:
-                results["activities"] = f"Indoor gym session in {location}"
+                results["activities"] = f"Indoor gym session"
             elif "Snow" in weather:
-                results["activities"] = f"Indoor winter party or Snow Baseball in {location}"
+                results["activities"] = f"Indoor winter party or Snow Baseball"
             elif "Clear" in weather or "Sunny" in weather:
-                results["activities"] = f"Outdoor cycling tour in {location}"
+                results["activities"] = f"Outdoor cycling tour in"
             elif "Haze" or "Smoke" in weather in weather:
-                results["activities"] = f"Indoor sports game as Air Quality is not good in {location}"    
+                results["activities"] = f"Indoor sports game as Air Quality is not good"    
             else:
-                results["activities"] = f"outdoor sports activity in {location}"
+                results["activities"] = f"outdoor sports activity"
 
     return results

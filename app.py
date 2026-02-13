@@ -173,7 +173,7 @@ if "results" in st.session_state:
 
     # Activities
     if "activities" in results:
-        city = GLOBAL_CONTEXT.get("activity_city", "Unknown City")
+        city = GLOBAL_CONTEXT.get("weather_city", "Unknown City")
         st.markdown(f"### 🎯 Suggested Activities in {city}")
         st.success(results["activities"])
 
