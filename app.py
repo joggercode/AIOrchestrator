@@ -74,7 +74,7 @@ if "results" in st.session_state:
                 except ValueError:
                     base_dt = datetime.datetime.strptime(travel_dt_str, "%Y-%m-%d")
 
-                check_in_date = (base_dt.date() + datetime.timedelta(days=1)).strftime("%Y-%m-%d")
+                check_in_date = (base_dt.date() + datetime.timedelta(days=0)).strftime("%Y-%m-%d")
                 GLOBAL_CONTEXT["hotel_check_in"] = check_in_date
                 GLOBAL_CONTEXT["weather_date"] = check_in_date
 
